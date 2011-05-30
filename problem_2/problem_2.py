@@ -1,18 +1,27 @@
 #!/usr/bin/python
 
-''' Project Euler Problem 2'''
+'''
+ Project Euler Problem 2
+
+This version relies on the fact that:
+
+next_even_fib = 4 * fib_(-2) + fib_(-1)
+'''
 
 limit = 3999999
 
-sum = 0
-a = 1
-b = 1
-c = a + b
+# unroll first two loop iterations
+a = 2
+b = 8
+c = 4 * b + a # 34
+
+sum  = a + b
 
 while c < limit:
     sum += c
-    a = b + c
-    b = c + a
-    c = a + b
+
+    a = b
+    b = c
+    c = 4 * b + a
 
 print sum
