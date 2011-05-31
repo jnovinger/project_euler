@@ -2,18 +2,20 @@
 
 '''
  Project Euler Problem 5
+
+ Answer: 232792560
 '''
 
-number = 1
+number = 0
 target = 20
 found_number = False
 
 while not found_number:
-    number += 1
+    number += target
 #    print "Number", number, "Target", target
 
-    for divisor in xrange(2, target + 1):
-        if number % divisor == 0 and divisor == target:
+    for divisor in xrange(target, 1, -1):
+        if number % divisor == 0 and divisor == 2:
 #            print "Divisor:", divisor
             found_number = True
             break
@@ -23,4 +25,4 @@ while not found_number:
         else:
             break
 
-print number
+print "Answer", number
