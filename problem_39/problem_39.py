@@ -31,4 +31,5 @@ for k in xrange(1, target):
     if p[k] > highest_value:
         highest_key = k
         highest_value = p[k]
-        print "Key:", highest_key, "Value:", highest_value
+
+print "Max Key:", highest_key, "Max Value:", highest_value
