@@ -28,9 +28,10 @@ def sum_proper_divisors(number):
         factor += 1
     return total
 
-number = 3
+number = 11
 total = 0
-upper_limit = 28123
+# http://mathworld.wolfram.com/AbundantNumber.html
+upper_limit = 20161
 
 begin = time()
 print "Calculating abundant numbers below %d." % upper_limit
